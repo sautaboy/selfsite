@@ -1,0 +1,907 @@
+:root {
+
+    /* red pallate */
+    --dark-red: #3D0C11;
+    --second-red: #D80032;
+    --third-red: #F78CA2;
+    --fourth-red: #F9DEC9;
+
+
+    --first-dark: #393646;
+    --second-dark: #4F4557;
+    --third-dark: #6D5D6E;
+    --fourth-dark: #F4EEE0;
+
+
+    --first-orange: #A9A9A9;
+    --second-orange: #FECDA6;
+    --third-orange: #FF5B22;
+    --fourth-orange: #FF9130;
+
+
+    --bcolor: hsl(0, 0%, 100%);
+    --footer-color: hsl(190, 56%, 51%);
+    --mainheading: hsl(204, 6%, 15%);
+    --para: hsl(204, 6%, 15%);
+    --hotish: hsl(328, 100%, 62%);
+    --skyblue: hsl(203, 100%, 35%);
+    --tiffany_blue: hsl(178, 50%, 60%);
+    --footer-bg: #D9D9D9;
+    --font-color: #fff;
+    --a-font-size: 18px;
+    --footer-background: hsl(197, 86%, 22%);
+    --button-background: hsl(197, 68%, 35%);
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+    background: #dadada;
+
+}
+
+
+
+#index-main {
+    min-height: 100vh;
+    width: 100vw;
+
+    background-image: url("/images//index-image.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+/* <!-- rest content which will be visible to nonn signup users --> */
+#non-signup-users-content {
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--first-orange);
+    background: #dadada;
+}
+
+
+
+
+
+
+#hanging-social-links {
+    /* background: red; */
+    width: 3rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 1vw;
+    z-index: 999;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#hanging-line {
+    height: 5rem;
+    width: 2px;
+    background: var(--button-background);
+}
+
+#hanging-social-links a {
+    font-size: 3rem;
+    color: var(--footer-background);
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+#hanging-social-links a:hover {
+    color: #fff;
+    scale: 1.1;
+}
+
+
+
+
+
+
+
+#first-page-content {
+    background: var(--second-dark);
+    height: calc(100vh);
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #dadada;
+}
+
+
+
+
+
+#face-one-png {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 5vw;
+    right: 1vw;
+    filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 0.285));
+    animation: colorchange 60s ease-in-out infinite;
+
+
+}
+
+.face-one-png {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 0;
+    left: 0;
+    /* filter: drop-shadow(0px 5px 0px red); */
+    animation: colorchange 20s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes colorchange {
+
+    0%,
+    100% {
+        filter: drop-shadow(0px 5px 0px rgba(255, 0, 0, 0.654));
+    }
+
+    75% {
+        filter: drop-shadow(0px 5px 0px blue);
+
+    }
+
+    50% {
+        filter: drop-shadow(0px 5px 0px green);
+    }
+}
+
+
+#first-page-content #left {
+    height: 60%;
+    width: 30%;
+    overflow: scroll;
+    border-left: 2px solid var(--button-background);
+    position: relative;
+    overflow: hidden;
+}
+
+#first-page-content #left h1 {
+    font-size: 100px;
+    letter-spacing: -8px;
+    line-height: 90px;
+    /* color: var(--button-background); */
+    text-transform: lowercase;
+    width: auto;
+    filter: drop-shadow(20px 1px 0 black);
+    color: hsl(0, 0%, 90%);
+    color: #dadada;
+}
+
+#first-page-content #center {
+    background: transparent;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px dotted #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: moveBackground 10s infinite linear;
+    border: 1px solid transparent;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: #fabcbc;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        /* border-radius: 45%; */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        /* Change this to the desired background color */
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+#first-page-content #center img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#first-page-content #right {
+    width: 25%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border-right: 2px solid #fff; */
+    justify-content: flex-end;
+    position: relative;
+}
+
+#first-page-content #right a {
+    color: #fff;
+    text-align: right;
+    font-size: 49px;
+    letter-spacing: -1px;
+    position: absolute;
+    right: 0;
+    transition: 1s linear;
+    filter: drop-shadow(1px 1px 0 black);
+
+    /* Added transition for smooth effect */
+
+}
+
+#first-page-content #right a:hover {
+    scale: 1.3;
+    color: var(--footer-background);
+}
+
+#first-page-content #right a:nth-child(1) {
+    bottom: 30%;
+}
+
+#first-page-content #right a:nth-child(2) {
+    bottom: 10%;
+}
+
+#first-page-content #right a:nth-child(3) {
+    bottom: 20%;
+}
+
+#first-page-content #right a:nth-child(4) {
+    bottom: 0;
+}
+
+
+
+
+/* second page content */
+#second-page-content {
+    min-height: 100vh;
+    padding: 10vw;
+    position: relative;
+
+    background: hsl(0, 0%, 82%);
+
+}
+
+#second-page-content #image-with-information {
+    background: black;
+    height: 40vh;
+    width: 50vw;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#second-page-content #image-with-information:hover #information {
+    transform: translateY(0%);
+}
+
+
+#second-page-content #image-with-information img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#second-page-content #image-with-information #information {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 10%;
+    transform: translateY(100%);
+    transition: .5s linear;
+    cursor: grabbing;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.049);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+#second-page-content #image-with-information #information h2,
+#second-page-content #image-with-information #information p {
+    color: #fff;
+    filter: drop-shadow(0px 0px 0px black);
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+#second-page-content #image-with-information #information h2 {
+    font-size: 52px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#second-page-content #image-with-information #information p {
+    font-size: 23px;
+    color: #fff;
+
+}
+
+#about-me-text {
+    width: 50vw;
+    display: flex;
+    height: 42vh;
+    padding: 5%;
+    gap: 5%;
+    /* From https://css.glass */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+#about-me-text #images-slider,
+#about-me-text #information {
+    width: 50%;
+}
+
+#about-me-text #images-slider {
+    height: 100%;
+    position: relative;
+    border: 1px silver solid;
+    padding: 2px;
+    overflow: hidden;
+
+
+}
+
+#about-me-text #images-slider img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+#about-me-text #information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#about-me-text #information h2,
+#about-me-text #information p {
+    color: #111;
+    letter-spacing: 1px;
+}
+
+#about-me-text #information h2 {
+    color: var(--footer-background);
+}
+
+
+#qualification {
+    /* background: var(--footer-background); */
+    position: absolute;
+    right: 10vw;
+    width: 30vw;
+    top: 10vw;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 10px; */
+    overflow-y: scroll;
+    padding-bottom: 20px;
+    /* From https://css.glass */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+h1.what-field {
+    border-bottom: 1px solid black;
+    width: fit-content;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--footer-background);
+}
+
+h2.title {
+    color: hsl(0, 0%, 40%);
+    filter: drop-shadow(0px .1px 0px black);
+    text-transform: capitalize;
+    color: var(--button-background);
+}
+
+#qualification label {
+    text-align: justify;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 1px;
+    /* background: var(--footer-background); */
+    padding: 10px;
+}
+
+#qualification button {
+    padding: 10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    width: calc(100% - 25px);
+    margin: 0 auto;
+    background: var(--button-background);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+#qualification button:hover {
+
+    background: var(--footer-background);
+}
+
+
+
+
+#third-page-content {
+    width: 100vw;
+    background: hsl(0, 0%, 79%);
+    padding: 10vw;
+}
+
+#portfolio-box-container {
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+
+}
+
+h1#all-my-projects {
+    text-transform: capitalize;
+    background: var(--footer-background);
+    min-height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+#portfolio-box-container .each-portfolio-box {
+    height: 300px;
+    width: 31%;
+    position: relative;
+    overflow: hidden;
+    overflow: hidden;
+    width: calc(100% / 3);
+    padding: 1rem;
+    background: var(--button-background);
+}
+
+#portfolio-box-container .each-portfolio-box:hover #information {
+    transform: translateY(0%);
+}
+
+#portfolio-box-container .each-portfolio-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#portfolio-box-container .each-portfolio-box #information {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5%;
+    letter-spacing: 1px;
+    transform: translateY(100%);
+    transition: .4s linear;
+    color: #fff;
+    overflow: hidden;
+
+
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(20, 1, 1, 0.743);
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+}
+
+
+
+
+
+#contact-container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10vw;
+    /* background: red; */
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-container #contact-field {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+}
+
+#contact-container #google-map {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    background: var(--footer-background);
+
+}
+
+#contact-container #google-map.active {
+    display: block;
+}
+
+#contact-container #google-map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+#cancel-google-map {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+#contact-field h1 {
+    font-size: 25px;
+    height: 8vh;
+    background: var(--footer-background);
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#find-me-on-map {
+    position: absolute;
+    right: 20px;
+    font-size: 2.3rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    /* background: red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#find-me-on-map-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    /* z-index: -1; */
+    font-size: 16px;
+    color: var(--button-background);
+    display: none;
+}
+
+#find-me-on-map-text.active {
+    display: block;
+}
+
+
+
+
+#contact-container #contact-field label {
+    width: 100%;
+    display: flex;
+    min-height: 3rem;
+    display: flex;
+    font-size: 20px;
+    letter-spacing: 1px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+
+#contact-container #contact-field label i {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    background: var(--footer-background);
+    color: #fff;
+    height: 100%;
+}
+
+#contact-container #contact-field label input,
+#contact-container #contact-field label ::placeholder {
+    width: 90%;
+    padding: 0 10px;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    height: 100%;
+    border: .5px solid rgba(0, 0, 0, 0.342);
+    border-left: none;
+    letter-spacing: 1px;
+    outline: none;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+
+#contact-container #contact-field label.textarea {
+    min-height: 26vh;
+    flex-direction: column;
+}
+
+#contact-container #contact-field label.textarea i {
+    width: 100%;
+    height: 20%;
+}
+
+#contact-container #contact-field label.textarea textarea {
+    width: 100%;
+    padding: 15px 20px;
+    height: 100%;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    border: .5px solid rgba(0, 0, 0, 0.342);
+
+}
+
+#submit-button {
+    height: 3rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background: var(--button-background);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s ease-in;
+}
+
+#submit-button:hover {
+    background: hsl(197, 86%, 22%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+    #login-logout {
+        top: initial;
+        right: initial;
+        gap: 10px;
+        width: 100%;
+        padding: 0 20px;
+        bottom: 20px;
+        justify-content: space-between;
+    }
+
+    #login-logout a {
+        font-size: 18px;
+        font-weight: 600;
+
+    }
+
+
+    #form-container {
+        width: 100%;
+    }
+
+    #form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+        padding: 20px;
+        height: fit-content;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #hanging-social-links a {
+        font-size: 2rem;
+    }
+
+    #hanging-social-links {
+        left: 0;
+    }
+
+    #first-page-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+
+    #first-page-content #left {
+        width: 100%;
+        height: fit-content;
+        border: none;
+    }
+
+    #face-one-png {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    #first-page-content #center {
+
+        height: none;
+        width: 100%;
+        border-radius: initial;
+        display: none;
+    }
+
+    #first-page-content #right {
+        width: 100%;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        /* background: red; */
+        height: fit-content;
+
+    }
+
+    #first-page-content #right a {
+        position: initial;
+        font-size: 32px;
+    }
+
+    #second-page-content #image-with-information {
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    #about-me-text {
+        width: 100%;
+        padding: initial;
+    }
+
+    #second-page-content {
+        padding: 1vw;
+    }
+
+    #qualification {
+        position: initial;
+        width: 100%;
+        padding: initial;
+    }
+
+    #third-page-content {
+        padding: 10px;
+    }
+
+    #portfolio-box-container .each-portfolio-box {
+        width: 50%;
+    }
+
+    #contact-container #contact-field {
+        width: 100%;
+    }
+
+    #contact-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #contact-container #google-map {
+        width: 100%;
+        padding: 10px;
+    }
+
+
+
+}
