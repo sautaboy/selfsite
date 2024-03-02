@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: rgb(249, 249, 222);
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: #424769;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#video-wrap {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+#video-wrap video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.second-page {
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    background: #12121298;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-page #sidebar {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-right: 1px solid #222;
+}
+
+.social-media {
+    display: flex;
+    gap: 1.3rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-media a {
+    font-size: 1.6vw;
+}
+
+
+
+.second-page #sidebar ul {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.second-page #sidebar ul a {
+    width: 90%;
+    padding: 1rem 2rem;
+
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.second-page #sidebar ul a:hover {
+    background: rgba(135, 207, 235, 0.082);
+}
+
+.second-page .preview-of-sidebar {
+    width: 80%;
+    position: relative;
+    overflow-y: hidden;
+}
+
+
+
+.second-page .preview-of-sidebar>div {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#introduction {
+    z-index: 1;
+
+}
+
+#introduction p {
+    width: 70%;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+#introduction .image-wrap {
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#hireme {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12rem 0;
+}
+
+#hireme>div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#hireme>div:nth-child(1) {
+    display: flex;
+    width: 30%;
+}
+
+#hireme>div:nth-child(1) {
+    display: flex;
+    width: 40%;
+    gap: 2rem;
+}
+
+#hireme>div:nth-child(1) label input,
+#hireme>div:nth-child(1) input[type="submit"] {
+    padding: .6rem 1rem;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+#hireme>div:nth-child(1) label textarea {
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: .6rem 1rem;
+}
+
+#hireme>div:nth-child(1) input[type="submit"] {
+    width: fit-content;
+    background: rgba(255, 255, 0, 0.807);
+    border-radius: 10px;
+    padding: .6rem 3rem;
+    color: #000;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#hireme>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#hireme>div:nth-child(2) div {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+#hireme>div:nth-child(2) p {
+    color: #999;
+}
+
+#hireme>div:nth-child(2) div div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+#hireme>div:nth-child(2) div div i {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+#hireme>div:nth-child(2) div div h4 span {
+    font-size: 15px;
+    color: #999;
+    font-weight: 100;
+}
+
+#education {
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+    width: fit-content;
+    gap: 6rem;
+}
+
+#education>div {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+#education div div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#education div div h3 {
+    letter-spacing: 1px;
+}
+
+#education div div h2 {
+    color: burlywood;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#education>div p {
+    width: 70%;
+    line-height: 25px;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 7% 5%;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.image-wrap {
+    width: calc(100% / 4);
+    height: 20rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    #main {
+        overflow-x: hidden;
+    }
+
+    .second-page .preview-of-sidebar {
+        overflow-y: auto;
+    }
+
+    .second-page #sidebar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: purple;
+        height: fit-content;
+        z-index: 9;
+        transform: translateY(-100%);
+    }
+
+
+    .second-page .preview-of-sidebar {
+        width: 100%;
+        padding: auto;
+        padding: initial;
+        gap: 2rem;
+    }
+
+    #introduction .image-wrap {
+        height: initial;
+        width: initial;
+        border-radius: 10px;
+    }
+
+
+    .second-page .preview-of-sidebar>div {
+        height: fit-content;
+        /* background: red; */
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+        gap: initial;
+    }
+
+    #introduction {
+        border-bottom: 1px solid white;
+    }
+
+    #introduction p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    #education>div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    #hireme {
+        flex-direction: column;
+        width: 100%;
+        padding: initial;
+        border-bottom: 1px solid white;
+        padding-bottom: 1rem;
+    }
+
+    #hireme>div:nth-child(1) {
+        width: 100%;
+    }
+
+    #education {
+        padding: initial;
+        gap: 2rem;
+        border-bottom: 1px solid white;
+        padding-bottom: 1rem;
+    }
+
+    #education>div p {
+        width: 100%;
+        font-size: smaller;
+        ;
+    }
+
+    #gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-wrap {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
